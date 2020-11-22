@@ -13,6 +13,12 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/gauravshetty48/GoodReadsScraper",
     packages=setuptools.find_packages(),
+    install_requires=[
+        'beautifulsoup4==4.7.1',
+        'langdetect==1.0.7',
+        'selenium==3.141.0',
+        'lxml==4.3.1'
+      ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
