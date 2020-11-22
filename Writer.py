@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 
+<<<<<<< HEAD
 from Tools import path as reviews_path
+=======
+from GoodReadsScraper.Tools import path as reviews_path
+>>>>>>> book-details
 import codecs, os
 
 

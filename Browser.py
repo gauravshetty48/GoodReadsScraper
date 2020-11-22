@@ -8,7 +8,11 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import (
     TimeoutException, NoSuchElementException, StaleElementReferenceException, WebDriverException
 )
+<<<<<<< HEAD
 from Tools import write_books, read_books, id_from_url
+=======
+from GoodReadsScraper.Tools import write_books, read_books, id_from_url
+>>>>>>> book-details
 
 
 class Browser(Chrome):
@@ -156,4 +160,27 @@ class Browser(Chrome):
         except NoSuchElementException:
             return False
 
+<<<<<<< HEAD
+=======
+
+    def book_details(self, book_id):
+        try:  # To find a the parent tag (to check whether page loaded)
+            author_name = self.find_element_by_css_selector("a.authorName").text
+            title = self.find_element_by_id("bookTitle").text
+            number_of_pages = int(self.find_element_by_xpath('//*[@id="details"]/div[1]/span[2]').text.strip(' pages'))
+
+        except (NoSuchElementException, TimeoutException):
+            return None
+        try:  # To find child link tag (to check whether it has other editions)
+            return {
+                "Book Id": book_id,
+                "Author": author_name,
+                "Title": title,
+                "Exclusive Shelf": "to-read",
+                "Number of Pages": number_of_pages,
+            }
+        except NoSuchElementException:
+            return False
+
+>>>>>>> book-details
     _SORTS = ["default", "newest", "oldest"]
