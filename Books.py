@@ -1,17 +1,14 @@
 #!/usr/bin/env python
 
 # import needed libraries
-<<<<<<< HEAD
 from Writer import Writer
 from Browser import Browser
 from bs4 import BeautifulSoup
 from Tools import id_from_url, read_books, get_digits
-=======
 from GoodReadsScraper.Writer import Writer
 from GoodReadsScraper.Browser import Browser
 from bs4 import BeautifulSoup
 from GoodReadsScraper.Tools import id_from_url, read_books, get_digits
->>>>>>> book-details
 
 
 # A class to Search then Scrape lists and books from GoodReads.com
@@ -112,8 +109,6 @@ class Books:
         self.br.open("/book/show/", book_id)
         return self.br.editions_id()
 
-<<<<<<< HEAD
-=======
     def get_book_details(self, book_id):
         self.br.open("/book/show/", book_id)
         try:
@@ -122,7 +117,7 @@ class Books:
             self.br.open("/book/show/", book_id)
             return self.br.book_details(book_id)
 
->>>>>>> book-details
+
     def get_book_edition_by_language(self, editions_id, lang):
         self.br.open_book_editions(editions_id)
         soup = BeautifulSoup(self.br.page_source, "lxml").find(class_="workEditions")
