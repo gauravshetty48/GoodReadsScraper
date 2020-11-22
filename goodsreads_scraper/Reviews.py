@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from Browser import Browser
-from Writer import Writer
+from goodsreads_scraper.Browser import Browser
+from goodsreads_scraper.Writer import Writer
 from bs4 import BeautifulSoup
 from langdetect import detect
 

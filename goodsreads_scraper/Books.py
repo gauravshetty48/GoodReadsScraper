@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-from Browser import Browser
+from goodsreads_scraper.Browser import Browser
 # import needed libraries
-from Writer import Writer
+from goodsreads_scraper.Writer import Writer
 from bs4 import BeautifulSoup
 
 from goodsreads_scraper.Tools import id_from_url, read_books, get_digits

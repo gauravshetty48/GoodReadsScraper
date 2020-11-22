@@ -2,8 +2,8 @@
 
 from time import sleep
 
-from Reviews import Reviews
-from Tools import read_books
+from goodsreads_scraper.Reviews import Reviews
+from goodsreads_scraper.Tools import read_books
 
 from goodsreads_scraper.Books import Books
 
