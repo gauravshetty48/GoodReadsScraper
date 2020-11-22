@@ -156,6 +156,7 @@ class Browser(Chrome):
         except NoSuchElementException:
             return False
 
+
     def book_details(self, book_id):
         try:  # To find a the parent tag (to check whether page loaded)
             author_name = self.find_element_by_css_selector("a.authorName").text
