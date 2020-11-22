@@ -8,12 +8,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import (
     TimeoutException, NoSuchElementException, StaleElementReferenceException, WebDriverException
 )
-<<<<<<< HEAD
 from Tools import write_books, read_books, id_from_url
-=======
-from GoodReadsScraper.Tools import write_books, read_books, id_from_url
->>>>>>> book-details
-
 
 class Browser(Chrome):
     OPTIONS = {"goog:chromeOptions": {
@@ -165,6 +160,7 @@ class Browser(Chrome):
             author_name = self.find_element_by_css_selector("a.authorName").text
             title = self.find_element_by_id("bookTitle").text
             number_of_pages = int(self.find_element_by_xpath('//*[@id="details"]/div[1]/span[2]').text.strip(' pages'))
+            book_cover = self.find_element_by_id("coverImage").get_attribute("src")
 
         except (NoSuchElementException, TimeoutException):
             return None
@@ -175,6 +171,7 @@ class Browser(Chrome):
                 "Title": title,
                 "Exclusive Shelf": "to-read",
                 "Number of Pages": number_of_pages,
+                "Cover": book_cover,
             }
         except NoSuchElementException:
             return False

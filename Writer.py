@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from Tools import path as reviews_path
-from GoodReadsScraper.Tools import path as reviews_path
 import codecs, os
 
 # A class to Write Books and Reviews from GoodReads.com to files

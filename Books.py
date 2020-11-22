@@ -5,10 +5,10 @@ from Writer import Writer
 from Browser import Browser
 from bs4 import BeautifulSoup
 from Tools import id_from_url, read_books, get_digits
-from GoodReadsScraper.Writer import Writer
-from GoodReadsScraper.Browser import Browser
+from Writer import Writer
+from Browser import Browser
 from bs4 import BeautifulSoup
-from GoodReadsScraper.Tools import id_from_url, read_books, get_digits
+from Tools import id_from_url, read_books, get_digits
 
 
 # A class to Search then Scrape lists and books from GoodReads.com
