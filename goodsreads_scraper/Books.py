@@ -1,14 +1,11 @@
 #!/usr/bin/env python
 
+from Browser import Browser
 # import needed libraries
 from Writer import Writer
-from Browser import Browser
 from bs4 import BeautifulSoup
-from Tools import id_from_url, read_books, get_digits
-from Writer import Writer
-from Browser import Browser
-from bs4 import BeautifulSoup
-from Tools import id_from_url, read_books, get_digits
+
+from goodsreads_scraper.Tools import id_from_url, read_books, get_digits
 
 
 # A class to Search then Scrape lists and books from GoodReads.com

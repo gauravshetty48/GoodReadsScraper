@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
-from Tools import path as reviews_path
-import codecs, os
+import codecs
+import os
+
+from goodsreads_scraper.Tools import path as reviews_path
+
 
 # A class to Write Books and Reviews from GoodReads.com to files
 class Writer:

@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
-from Tools import SafeThread
-from bs4 import BeautifulSoup
-from langdetect import detect
 from Browser import Browser
 from Writer import Writer
+from bs4 import BeautifulSoup
+from langdetect import detect
+
+from goodsreads_scraper.Tools import SafeThread
 
 
 # A class to Scrape books Reviews from GoodReads.com

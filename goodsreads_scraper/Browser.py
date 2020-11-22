@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 
-# Download link: https://sites.google.com/a/chromium.org/chromedriver/downloads
-from selenium.webdriver import Chrome
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import (
     TimeoutException, NoSuchElementException, StaleElementReferenceException, WebDriverException
 )
-from Tools import write_books, read_books, id_from_url
+# Download link: https://sites.google.com/a/chromium.org/chromedriver/downloads
+from selenium.webdriver import Chrome
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.ui import WebDriverWait
+
+from goodsreads_scraper.Tools import write_books, read_books, id_from_url
+
 
 class Browser(Chrome):
     OPTIONS = {"goog:chromeOptions": {

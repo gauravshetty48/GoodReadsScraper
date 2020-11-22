@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 
-from Books import Books
+from time import sleep
+
 from Reviews import Reviews
 from Tools import read_books
-from time import sleep
+
+from goodsreads_scraper.Books import Books
+
 # from Tools import *
 
 if __name__ == '__main__':
