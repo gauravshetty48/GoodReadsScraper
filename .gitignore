@@ -1,0 +1,19 @@
+#
+# Igonre all reviews output files and folder
+#
+*.csv
+lists/
+reviews/
+*Reviews/
+Dialects/
+
+#
+# Ignore PyCharm and Python folders
+#
+.idea/
+__pycache__/
+
+#
+# Ignore Chrome Driver
+#
+chromedriver*
