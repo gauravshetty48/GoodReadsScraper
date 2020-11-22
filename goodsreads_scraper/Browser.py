@@ -178,4 +178,15 @@ class Browser(Chrome):
         except NoSuchElementException:
             return False
 
+    def book_cover(self):
+        try:
+            book_cover = self.find_element_by_id("coverImage").get_attribute("src")
+
+        except (NoSuchElementException, TimeoutException):
+            return None
+        try:  # To find child link tag (to check whether it has other editions)
+            return book_cover
+        except NoSuchElementException:
+            return False
+
     _SORTS = ["default", "newest", "oldest"]

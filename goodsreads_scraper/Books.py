@@ -114,6 +114,13 @@ class Books:
             self.br.open("/book/show/", book_id)
             return self.br.book_details(book_id)
 
+    def get_book_cover(self, book_id):
+        self.br.open("/book/show/", book_id)
+        try:
+            return self.br.book_cover()
+        except ValueError:
+            self.br.open("/book/show/", book_id)
+            return self.br.book_cover(book_id)
 
     def get_book_edition_by_language(self, editions_id, lang):
         self.br.open_book_editions(editions_id)
